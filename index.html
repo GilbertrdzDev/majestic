@@ -12,41 +12,7 @@
 
     <style>
         /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            font-size: 110%;
-            /* Escalado al 110% */
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background-color: white;
-            /* Fondo blanco */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Logotipo */
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-container img {
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .logo-container span {
-            color: black;
-            /* Texto negro */
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
+     
 
         /* Navegación */
         nav ul {
@@ -126,77 +92,40 @@
         <main>
             <div id="app"></div>
         </main>
-        <footer style="background-color: #1a1a1a; color: white; padding: 20px; border-radius: 8px;">
-            <div
-                style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; text-align: left; gap: 10px;">
+        <footer>
+            <div class="footer-container">
                 <!-- Columna de Logo -->
-                <div style="flex: 1 1 calc(25% - 10px); text-align: center; margin: 15px;">
-                    <img src="/recursos/Logo/Majestic-W.png" alt="Majestic Logo"
-                        style="margin: 12px 0; height: 80px; margin-bottom: 5px;">
+                <div class="footer-column logo-column">
+                    <img src="/recursos/Logo/Majestic-W.png" alt="Majestic Logo" class="footer-logo">
                 </div>
-
+    
                 <!-- Columna de Contacto -->
-                <div style="flex: 1 1 calc(25% - 10px); margin: 5px;">
-                    <h3 style="color: #FFD700; font-size: 0.9rem; margin-bottom: 5px;">Contacto</h3>
-                    <p style="font-size: 0.8rem; margin-bottom: 5px;">
-                        <span style="font-size: 18px; margin-right: 5px;">📞</span>
-                        Teléfono: +57 312 345 6789
-                    </p>
-                    <p style="font-size: 0.8rem; margin-bottom: 5px;">
-                        <span style="font-size: 18px; margin-right: 5px;">📧</span>
-                        Email: <a href="mailto:contacto@majestic.com"
-                            style="color: white; text-decoration: none;">contacto@majestic.com</a>
-                    </p>
-                    <p style="font-size: 0.8rem; margin-bottom: 5px;">
-                        <span style="font-size: 18px; margin-right: 5px;">📍</span>
-                        Dirección: Calle 123, Bogotá, Colombia
-                    </p>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p><span class="icon">📞</span> Teléfono: +57 312 345 6789</p>
+                    <p><span class="icon">📧</span> Email: <a href="mailto:contacto@majestic.com">contacto@majestic.com</a></p>
+                    <p><span class="icon">📍</span> Dirección: Calle 123, Bogotá, Colombia</p>
                 </div>
-
+    
                 <!-- Columna de Horarios -->
-                <div style="flex: 1 1 calc(25% - 10px); margin: 5px;">
-                    <h3 style="color: #FFD700; font-size: 0.9rem; margin-bottom: 5px;">Horarios</h3>
-                    <p style="font-size: 0.8rem; margin-bottom: 5px;">
-                        <span style="font-size: 18px; margin-right: 5px;">🗓️</span>
-                        Lunes a Viernes: 8:00 AM - 6:00 PM
-                    </p>
-                    <p style="font-size: 0.8rem; margin-bottom: 5px;">
-                        <span style="font-size: 18px; margin-right: 5px;">📅</span>
-                        Sábados: 9:00 AM - 3:00 PM
-                    </p>
-                    <p style="font-size: 0.8rem; margin-bottom: 5px;">
-                        <span style="font-size: 18px; margin-right: 5px;">🚫</span>
-                        Domingos: Cerrado
-                    </p>
+                <div class="footer-column">
+                    <h3>Horarios</h3>
+                    <p><span class="icon">🗓️</span> Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                    <p><span class="icon">📅</span> Sábados: 9:00 AM - 3:00 PM</p>
+                    <p><span class="icon">🚫</span> Domingos: Cerrado</p>
                 </div>
-
+    
                 <!-- Columna de Redes Sociales -->
-                <div style="flex: 1 1 calc(10% - 10px); margin: 5px;">
-                    <h3 style="color: #FFD700; font-size: 0.9rem; margin-bottom: 5px;">Síguenos</h3>
-                    <p style="font-size: 0.8rem; margin-bottom: 5px;">
-                        <a href="https://facebook.com/majestic" target="_blank"
-                            style="color: white; text-decoration: none;">
-                            🌐 Facebook
-                        </a>
-                    </p>
-                    <p style="font-size: 0.8rem; margin-bottom: 5px;">
-                        <a href="https://instagram.com/majestic" target="_blank"
-                            style="color: white; text-decoration: none;">
-                            📸 Instagram
-                        </a>
-                    </p>
-                    <p style="font-size: 0.8rem; margin-bottom: 5px;">
-                        <a href="https://twitter.com/majestic" target="_blank"
-                            style="color: white; text-decoration: none;">
-                            🐦 Twitter
-                        </a>
-                    </p>
+                <div class="footer-column">
+                    <h3>Síguenos</h3>
+                    <p><a href="https://facebook.com/majestic" target="_blank">🌐 Facebook</a></p>
+                    <p><a href="https://instagram.com/majestic" target="_blank">📸 Instagram</a></p>
+                    <p><a href="https://twitter.com/majestic" target="_blank">🐦 Twitter</a></p>
                 </div>
             </div>
-
+    
             <!-- Derechos Reservados -->
-            <p style="text-align: center; margin-top: 10px; font-size: 0.7rem;">&copy; 2024 Majestic - Todos los
-                derechos reservados.</p>
+            <p class="footer-rights">&copy; 2024 Majestic - Todos los derechos reservados.</p>
         </footer>
 
 
