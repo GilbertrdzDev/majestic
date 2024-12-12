@@ -1,5 +1,199 @@
-<h1>Home page</h1>
-<section >
-    <h1>Bienvenido a Majestic</h1>
-    <p>Descubre las mejores prendas para todos los estilos. ¡Viste con elegancia, destaca tu esencia!</p>
-</section>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majestic - Inicio</title>
+    <!-- css-->
+    <link rel="stylesheet" href="../../Recursos/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../Recursos/assets/css/templatemo.css">
+    <link rel="stylesheet" href="./../Recursos/assets/css/custom.css">
+    <link rel="stylesheet" href="./../Recursos/assets/css/fontawesome.min.css">
+    <style>
+        /* Encabezado */
+        header img {
+            height: 40px;
+            /* Reduce el tamaño del logotipo */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #283342;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffb522;
+        }
+
+        /* Main Section */
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            gap: 10px;
+            /* Espaciado entre el texto y la imagen */
+            flex-wrap: wrap;
+            /* Permite que los elementos se acomoden en dispositivos pequeños */
+        }
+
+        .text-content {
+            max-width: 50%;
+            /* Texto ocupa la mitad del contenedor */
+        }
+
+        .text-content h1 {
+            text-align: left;
+            /* Alinea el texto a la izquierda */
+            font-size: 3rem;
+            /* Ajusta el tamaño de la fuente */
+            font-weight: 900;
+            /* Letras gruesas y llamativas */
+        }
+
+        .text-content h1 span,
+        .text-content h2 span {
+            color: #c08c25;
+        }
+
+        .text-content h2 {
+            text-align: left;
+            /* Alinea el texto a la izquierda */
+            font-size: 1.8rem;
+            /* Ajusta tamaño del subtítulo */
+            margin-bottom: 10px;
+        }
+
+        .text-content p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .text-content a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #af9e7d;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .text-content a:hover {
+            background-color: #6d4e2f;
+        }
+
+        .image-container {
+            max-width: 45%;
+            /* Imagen ocupa el 45% del contenedor */
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <!-- inicio secciones-->
+    <!-- carrusel -->
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="../../src/img/paginas/negocios-casual.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left align-self-center">
+                                <div class="text-content">
+                                    <h2><span>Vísitenos con</span></h2>
+                                    <h1><span>ELEGANCIA</span></h1>
+                                    <h2><span>Destaca tu esencia</span></h2>
+                                    <p>
+                                        Sumérgete en la moda y la elegancia con la comodidad en cada prenda.
+                                        Descubre una colección de ropa casual que no solo realza tu estilo, sino
+                                        que también te brinda la sofisticación que mereces.
+                                    </p>
+                                    <a href="shop.html">Explorar Colección</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="../../Recursos/assets/img/category_img_03.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Accesorios</h1>
+                                <h3 class="h2">Línea de accesorios de la tienda.</h3>
+                                <p>
+
+                                    <strong></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="../../Recursos/assets/img/category_img_02.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Línea Hamacas</h1>
+                                <h3 class="h2">Hamacas hechas a mano. </h3>
+                                <p>
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel"
+            role="button" data-bs-slide="prev">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel"
+            role="button" data-bs-slide="next">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <!-- fin de pie-->
+    <!-- archivos js-->
+    <script src="../../Recursos/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../Recursos/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../Recursos/assets/js/jquery-1.11.0.min.js"></script>
+    <script src="../../Recursos/assets/js/templatemo.js"></script>
+    <script src="../../Recursos/assets/js/custom.js"></script>
+
+
+    
+
+    <!-- fin de pie-->
+    <!-- archivos js-->
+
+    </body>
+
+</html>

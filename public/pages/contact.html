@@ -1,6 +1,121 @@
-<h1>Contact page</h1>
+<style>
+        .header-bar {
+              position: relative;
+              display: flex; /* Alinea las imágenes en fila horizontal */
+              width: 100%; /* Ocupa todo el ancho del contenedor */
+              height: 250px; /* Altura de la barra */
+              background-color: #F6D8C6;
+          }
+  
+          .header-bar img {
+              width: 13%; /* Cada imagen ocupa el 25% del ancho */
+              height: 110%; /* Ajusta la altura al 100% de la barra */
+              object-fit: cover; /* Ajusta la imagen para que se recorte sin distorsión */
+          }
+  
+          h2{
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333333;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 2px solid #333333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          }
+  
+      .header-bar h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra el texto horizontal y verticalmente */
+            font-size: 2.0rem; /* Tamaño del texto */
+            color: #fdfdfd; /* Blanco */
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+            padding: 15px 30px; /* Espaciado interno */
+            border: 4px solid #f5f4f3; /* Borde más grueso */
+            border-radius: 10px; /* Bordes redondeados */
+            text-align: center;
+        }
+          /* Grid de productos */
+          .product-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adaptable a diferentes tamaños de pantalla */
+              gap: 20px;
+              padding: 20px;
+          }
+  
+          .product-card {
+              background-color: #ffffff;
+              border-radius: 10px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              text-align: center;
+              padding: 15px;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+  
+          .product-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+          }
+  
+          .product-card img {
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 5px;
+              margin-bottom: 15px;
+          }
+  
+          .product-card h3 {
+              font-size: 1.5rem;
+              margin: 10px 0;
+              color: #1a1a1a;
+          }
+  
+          .product-card p {
+              font-size: 1.2rem;
+              color: #4caf50; /* Precio en verde */
+              margin-bottom: 10px;
+          }
+  
+          .product-card button {
+              background-color: #4caf50;
+              color: #ffffff;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              cursor: pointer;
+              font-size: 16px;
+              transition: background-color 0.3s ease, transform 0.2s ease;
+          }
+  
+          .product-card button:hover {
+              background-color: #25b6b6;
+              transform: scale(1.05);
+          }
+</style>
 <section>
-    <h1>Contáctanos</h1>
+<div class="header-bar">
+          <img src="../../src/img/Ropa-mujer/blazer-casual.jpg" alt="Imagen 1">
+          <img src="../../src/img/Ropa-mujer/blusa-casual.jpg" alt="Imagen 2">
+          <img src="../../src/img/Ropa-niños/sudadera-infantil.jpeg" alt="Imagen 3">
+          <img src="../../src/img/Ropa-mujer/chaqueta-chic.jpg" alt="Imagen 4">
+          <img src="../../src/img/Ropa-bebe/falda-blusa.jpg" alt="Imagen 5">
+          <img src="../../src/img/Ropa-mujer/falda-vintage.jpg" alt="Imagen 6">
+          <img src="../../src/img/Ropa-hombre/camisa-cuadros.jpg" alt="Imagen 7">
+          <h1>Contáctanos</h1>
+      </div>
+</section>
+<br>
+<section>
     <p>¿Tienes alguna pregunta o necesitas ayuda? Estamos aquí para asistirte. Completa el formulario o utiliza
         los métodos de contacto a continuación para comunicarte con nosotros.</p>
 </section>
@@ -33,8 +148,10 @@
 </section>
 
 <section>
-    <h2>Ubicación</h2>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.556366465562!2d-74.08175348458055!3d4.609710143425451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99d3c8ec90b1%3A0x34c13c4e5f3fef7!2sBogotá%2C%20Colombia!5e0!3m2!1ses!2ses!4v1696650592608!5m2!1ses!2ses"
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="map-container">
+        <h2>Ubicación</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.556366465562!2d-74.08175348458055!3d4.609710143425451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99d3c8ec90b1%3A0x34c13c4e5f3fef7!2sBogotá%2C%20Colombia!5e0!3m2!1ses!2ses!4v1696650592608!5m2!1ses!2ses"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 </section>
