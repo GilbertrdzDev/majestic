@@ -12,11 +12,6 @@ export const navItems: NavItem[] = [
   {name: "About", url: "/about", render: "about"},
   {name: "Shop", url: "/shop", render: "shop"},
   {name: "Contact", url: "/contact", render: "contact"},
-  {name: "Man", url: "/hombre", render: "hombre"},
-  {name: "Women", url: "/mujer", render: "mujer"},
-  {name: "Baby", url: "/bebe", render: "bebe"},
-  {name: "Sporty", url: "/deportiva", render: "deportiva"},
-  {name: "Child", url: "/nino", render: "nino"},
 ];
 
 const app: HTMLElement | null = document.getElementById("app");
