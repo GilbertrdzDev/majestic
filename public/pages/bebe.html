@@ -1,191 +1,76 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ropa de Bebé - Majestic</title>
-    <link rel="stylesheet" href="submenu.css">
-
-    <style>
-        .header-bar {
-              position: relative;
-              display: flex; /* Alinea las imágenes en fila horizontal */
-              width: 100%; /* Ocupa todo el ancho del contenedor */
-              height: 250px; /* Altura de la barra */
-              background-color: #F6D8C6;
-          }
-    
-          .header-bar img {
-              width: 13%; /* Cada imagen ocupa el 25% del ancho */
-              height: 110%; /* Ajusta la altura al 100% de la barra */
-              object-fit: cover; /* Ajusta la imagen para que se recorte sin distorsión */
-          }
-    
-          
-    
-           .header-bar h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Centra el texto horizontal y verticalmente */
-            font-size: 3.0rem; /* Tamaño del texto */
-            color: #fdfdfd; /* Blanco */
-            font-weight: bold;
-            text-transform: uppercase;
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
-            padding: 15px 30px; /* Espaciado interno */
-            border: 4px solid #f5f4f3; /* Borde más grueso */
-            border-radius: 10px; /* Bordes redondeados */
-            text-align: center;
-        }
-          /* Grid de productos */
-          .product-grid {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adaptable a diferentes tamaños de pantalla */
-              gap: 20px;
-              padding: 20px;
-          }
-    
-          .product-card {
-              background-color: #ffffff;
-              border-radius: 10px;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-              text-align: center;
-              padding: 15px;
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-          }
-    
-          .product-card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-          }
-    
-          .product-card img {
-              width: 100%;
-              height: 200px;
-              object-fit: cover;
-              border-radius: 5px;
-              margin-bottom: 15px;
-          }
-    
-          .product-card h3 {
-              font-size: 1.5rem;
-              margin: 10px 0;
-              color: #1a1a1a;
-          }
-    
-          .product-card p {
-              font-size: 1.2rem;
-              color: #4caf50; /* Precio en verde */
-              margin-bottom: 10px;
-          }
-    
-          .product-card button {
-              background-color: #4caf50;
-              color: #ffffff;
-              border: none;
-              padding: 10px 20px;
-              border-radius: 5px;
-              cursor: pointer;
-              font-size: 16px;
-              transition: background-color 0.3s ease, transform 0.2s ease;
-          }
-    
-          .product-card button:hover {
-              background-color: #25b6b6;
-              transform: scale(1.05);
-          }
-          
-    </style>
-      
-    </head>
-    
-    <body>
-      
-    <section>
+<section>
     <div class="header-bar">
-          <img src="../../src/img/Ropa-bebe/abrigo-invierno.jpg" alt="Imagen 1">
-          <img src="../../src/img/Ropa-bebe/body-algodon.jpg" alt="Imagen 2">
-          <img src="../../src/img/Ropa-bebe/conjunto-bebe.jpg" alt="Imagen 3">
-          <img src="../../src/img/Ropa-bebe/falda-blusa.jpg" alt="Imagen 4">
-          <img src="../../src/img/Ropa-bebe/mameluco-estampado.jpg" alt="Imagen 5">
-          <img src="../../src/img/Ropa-bebe/pijama-invierno.jpg" alt="Imagen 6">
-          <img src="../../src/img/Ropa-bebe/vestido-bebe.jpg" alt="Imagen 7">
-          <h1>Ropa de Bebe</h1>
-      </div>
-    
-</head>
+        <img src="../../src/img/Ropa-bebe/abrigo-invierno.jpg" alt="Imagen 1">
+        <img src="../../src/img/Ropa-bebe/body-algodon.jpg" alt="Imagen 2">
+        <img src="../../src/img/Ropa-bebe/conjunto-bebe.jpg" alt="Imagen 3">
+        <img src="../../src/img/Ropa-bebe/falda-blusa.jpg" alt="Imagen 4">
+        <img src="../../src/img/Ropa-bebe/mameluco-estampado.jpg" alt="Imagen 5">
+        <img src="../../src/img/Ropa-bebe/pijama-invierno.jpg" alt="Imagen 6">
+        <img src="../../src/img/Ropa-bebe/vestido-bebe.jpg" alt="Imagen 7">
+        <h1>Ropa de Bebe</h1>
+    </div>
+    <div class="product-grid">
+        <div class="product-card" data-category="man" data-price="20000" data-name="Conjunto para Bebé">
+            <img src="../../src/img/Ropa-bebe/conjunto-bebe.jpg" alt="Conjunto para Bebé">
+            <h3>Conjunto para Bebé</h3>
+            <p>$20,000</p>
+            <button class="btn-add-cart" (
+            'Conjunto para Bebé', 20000)">Añadir al carrito</button>
+        </div>
 
-<body>
-   
-
-   <section>
-
-<div class="product-grid">
-    <div class="product-card"data-category="man" data-price="20000" data-name="Conjunto para Bebé">
-        <img src="../../src/img/Ropa-bebe/conjunto-bebe.jpg" alt="Conjunto para Bebé">
-        <h3>Conjunto para Bebé</h3>
-        <p>$20,000</p>
-        <button class="btn-add-cart" ('Conjunto para Bebé', 20000)">Añadir al carrito</button>
+        <div class="product-card">
+            <img src="../../src/img/Ropa-bebe/body-algodon.jpg" alt="Body de Algodón">
+            <h3>Body de Algodón</h3>
+            <p>$15,000</p>
+            <button onclick="addToCart('Body de Algodón', 15000)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../../src/img/Ropa-bebe/pijama-invierno.jpg" alt="Pijama de Invierno">
+            <h3>Pijama de Invierno</h3>
+            <p>$25,000</p>
+            <button onclick="addToCart('Pijama de Invierno', 25000)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../../src/img/Ropa-bebe/vestido-bebe.jpg" alt="Vestido de Bebé">
+            <h3>Vestido de Bebé</h3>
+            <p>$30,000</p>
+            <button onclick="addToCart('Vestido de Bebé', 30000)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../../src/img/Ropa-bebe/mameluco-estampado.jpg" alt="Mameluco Estampado">
+            <h3>Mameluco Estampado</h3>
+            <p>$18,000</p>
+            <button onclick="addToCart('Mameluco Estampado', 18000)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../../src/img/Ropa-bebe/abrigo-invierno.jpg" alt="Abrigo de Invierno">
+            <h3>Abrigo de Invierno</h3>
+            <p>$35,000</p>
+            <button onclick="addToCart('Abrigo de Invierno', 35000)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../../src/img/Ropa-bebe/conjunto-verano.jpg" alt="Conjunto de Verano">
+            <h3>Conjunto de Verano</h3>
+            <p>$20,000</p>
+            <button onclick="addToCart('Conjunto de Verano', 20000)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../../src/img/Ropa-bebe/sombrero-bebe.jpg" alt="Sombrero para Bebé">
+            <h3>Sombrero para Bebé</h3>
+            <p>$10,000</p>
+            <button onclick="addToCart('Sombrero para Bebé', 10000)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../../src/img/Ropa-bebe/zapatos-bebe.jpg" alt="Zapatos de Bebé">
+            <h3>Zapatos de Bebé</h3>
+            <p>$25,000</p>
+            <button onclick="addToCart('Zapatos de Bebé', 25000)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../../src/img/Ropa-bebe/falda-blusa.jpg" alt="Falda con Blusa">
+            <h3>Falda con Blusa</h3>
+            <p>$28,000</p>
+            <button onclick="addToCart('Falda con Blusa', 28000)">Añadir al carrito</button>
+        </div>
     </div>
-
-    <div class="product-card">
-        <img src="../../src/img/Ropa-bebe/body-algodon.jpg" alt="Body de Algodón">
-        <h3>Body de Algodón</h3>
-        <p>$15,000</p>
-        <button onclick="addToCart('Body de Algodón', 15000)">Añadir al carrito</button>
-    </div>
-    <div class="product-card">
-        <img src="../../src/img/Ropa-bebe/pijama-invierno.jpg" alt="Pijama de Invierno">
-        <h3>Pijama de Invierno</h3>
-        <p>$25,000</p>
-        <button onclick="addToCart('Pijama de Invierno', 25000)">Añadir al carrito</button>
-    </div>
-    <div class="product-card">
-        <img src="../../src/img/Ropa-bebe/vestido-bebe.jpg" alt="Vestido de Bebé">
-        <h3>Vestido de Bebé</h3>
-        <p>$30,000</p>
-        <button onclick="addToCart('Vestido de Bebé', 30000)">Añadir al carrito</button>
-    </div>
-    <div class="product-card">
-        <img src="../../src/img/Ropa-bebe/mameluco-estampado.jpg" alt="Mameluco Estampado">
-        <h3>Mameluco Estampado</h3>
-        <p>$18,000</p>
-        <button onclick="addToCart('Mameluco Estampado', 18000)">Añadir al carrito</button>
-    </div>
-    <div class="product-card">
-        <img src="../../src/img/Ropa-bebe/abrigo-invierno.jpg" alt="Abrigo de Invierno">
-        <h3>Abrigo de Invierno</h3>
-        <p>$35,000</p>
-        <button onclick="addToCart('Abrigo de Invierno', 35000)">Añadir al carrito</button>
-    </div>
-    <div class="product-card">
-        <img src="../../src/img/Ropa-bebe/conjunto-verano.jpg" alt="Conjunto de Verano">
-        <h3>Conjunto de Verano</h3>
-        <p>$20,000</p>
-        <button onclick="addToCart('Conjunto de Verano', 20000)">Añadir al carrito</button>
-    </div>
-    <div class="product-card">
-        <img src="../../src/img/Ropa-bebe/sombrero-bebe.jpg" alt="Sombrero para Bebé">
-        <h3>Sombrero para Bebé</h3>
-        <p>$10,000</p>
-        <button onclick="addToCart('Sombrero para Bebé', 10000)">Añadir al carrito</button>
-    </div>
-    <div class="product-card">
-        <img src="../../src/img/Ropa-bebe/zapatos-bebe.jpg" alt="Zapatos de Bebé">
-        <h3>Zapatos de Bebé</h3>
-        <p>$25,000</p>
-        <button onclick="addToCart('Zapatos de Bebé', 25000)">Añadir al carrito</button>
-    </div>
-    <div class="product-card">
-        <img src="../../src/img/Ropa-bebe/falda-blusa.jpg" alt="Falda con Blusa">
-        <h3>Falda con Blusa</h3>
-        <p>$28,000</p>
-        <button onclick="addToCart('Falda con Blusa', 28000)">Añadir al carrito</button>
-    </div>
-</div>
 </section>
-</body>
-
-</html>
