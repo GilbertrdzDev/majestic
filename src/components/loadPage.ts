@@ -1,6 +1,6 @@
 export const loadPage = async (page: string) => {
   try {
-    const response = await fetch(`./pages/${page}.html`);
+    const response = await fetch(`/pages/${page}.html`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

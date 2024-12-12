@@ -1,5 +1,6 @@
-import Navigo from 'navigo';
-import { loadPage } from "./components/loadPage.ts";
+import { getRouter } from "./components/getRouter.ts";
+import { registerRoute } from "./components/registerRoute.ts";
+import { getAppRoot } from "./components/getAppRoot.ts";
 
 export interface NavItem {
   name: string;
@@ -26,7 +27,7 @@ export const navItems: NavItem[] = [
   },
 ];
 
-const app: HTMLElement | null = document.getElementById("app");
+const app = getAppRoot();
 const nav: HTMLElement | null = document.getElementById("navigation");
 
 let navHTML = `<ul>` +
@@ -36,7 +37,7 @@ let navHTML = `<ul>` +
         <a href="${item.url}">${item.name}</a>
         ${
       item.subItems
-        ? `<ul>` +
+        ? `<ul class="submenu">` +
         item.subItems
             .map(
               (subItem) =>
@@ -52,20 +53,6 @@ let navHTML = `<ul>` +
 
 if (nav) nav.innerHTML = navHTML;
 
-const router = new Navigo("/", {
-  hash: false,
-  linksSelector: 'a',
-});
-
-const registerRoute = async (url: string, render: string) => {
-  router.on(url, async () => {
-    const content = await loadPage(render);
-    if (app && content) {
-      app.innerHTML = content;
-    }
-  });
-};
-
 for (const item of navItems) {
   await registerRoute(item.url, item.render);
 
@@ -75,6 +62,8 @@ for (const item of navItems) {
     }
   }
 }
+
+const router = getRouter();
 
 router.notFound(() => {
   if (app) app.innerHTML = `<h1>Página no encontrada</h1>`;
