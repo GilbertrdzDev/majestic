@@ -20,7 +20,7 @@ body {
 header {
   background-color: #ffffff;
   /* Encabezado negro */
-  color: #283342;
+  color:#283342;
   padding: 15px 20px;
   display: flex;
   align-items: center;
@@ -97,7 +97,7 @@ nav ul.main-menu li a:hover {
 
 /* Contenido principal */
 main {
-  padding: 0 100px 0 100px;
+  padding:0 100px 0 100px;
   background-color: #F6D8C6;
   /* Fondo suave */
 }
@@ -239,4 +239,3 @@ footer {
 #contact-form button:hover {
   background-color: #080808;
 }
-
