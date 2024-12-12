@@ -7,13 +7,12 @@
   */
 /* Configuración básica */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
   margin: 0;
   padding: 0;
   background-color: #F6D8C6;
-  /* Fondo blanco para limpieza */
   color: #1a1a1a;
-  /* Texto negro intenso */
 }
 
 /* Encabezado */
@@ -33,28 +32,49 @@ header .logo {
   height: 50px;
 }
 
-nav ul.main-menu {
-  list-style: none;
+  /* Navegación */
+nav ul {
   display: flex;
-  gap: 15px;
-  margin: 0;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  /* Elimina puntos de lista */
   padding: 0;
+  margin: 0;
 }
-
-nav ul.main-menu li a {
-  color: #283342;
+nav ul li {
+  margin: 0 15px;
+  /* Espaciado entre los enlaces */
+}
+nav ul li a {
   text-decoration: none;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Elimina subrayado */
+  color: black;
+  /* Letras negras */
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  /* Efecto suave al pasar el cursor */
 }
-
-nav ul.main-menu li a:hover {
-  background-color: #af9e7d;
-  /* Verde para hover */
-  color: #283342;
-  /* Texto blanco */
+nav ul li a:hover {
+  color: #FFD700;
+  /* Cambia a dorado al pasar el cursor */
+}
+/* Iconos */
+.icons-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* Espaciado entre los iconos */
+}
+.icons-container img {
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.icons-container img:hover {
+  transform: scale(1.2);
+  /* Efecto de zoom al pasar el cursor */
 }
 
 /* Submenú */
@@ -112,6 +132,67 @@ h1 {
 section {
   margin: 20px 0;
   color: #1a1a1a;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: 5px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  gap: 5px;
+}
+
+.footer-column {
+  flex: 1 1 calc(25% - 10px);
+  margin: 5px;
+}
+
+.logo-column {
+  text-align: center;
+  margin: 15px;
+}
+
+.footer-logo {
+  margin: 12px 0;
+  height: 80px;
+  margin-bottom: 5px;
+}
+
+.footer-column h3 {
+  color: #FFD700;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.footer-column p {
+  font-size: 0.8rem;
+  margin-bottom: 5px 0;
+}
+
+.footer-column .icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+
+}
+
+.footer-rights {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.7rem;
 }
 
 /* Tarjetas de producto */
@@ -180,15 +261,44 @@ section {
 }
 
 
+.text-content {
+  max-width: 50%; /* Texto ocupa la mitad del contenedor */
+}
 
-/* Pie de página */
-footer {
-  background-color: #333333;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
-  margin-top: 20px;
+.text-content h1 {
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 3rem; /* Ajusta el tamaño de la fuente */
+  font-weight: 900; /* Letras gruesas y llamativas */
+}
+
+.text-content h1 span,
+.text-content h2 span {
+  color: #c08c25;
+}
+
+.text-content h2 {
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 1.8rem; /* Ajusta tamaño del subtítulo */
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.text-content a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #af9e7d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.text-content a:hover {
+  background-color: #6d4e2f;
 }
 
 #contact-form {
@@ -238,4 +348,63 @@ footer {
 
 #contact-form button:hover {
   background-color: #080808;
+}
+
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.map-container iframe {
+  border-radius: 15px;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  justify-content: space-between; /* Texto a la izquierda y carrusel a la derecha */
+  align-items: center; /* Centra verticalmente el contenido */
+  gap: 20px; /* Espaciado entre bloques */
+}
+
+/* Estilo para la imagen del carrusel */
+.img_carrusel {
+  flex: 1;
+  max-width: 500px; /* Ajusta según tus necesidades */
+  max-height: 450px; /* Ajusta para limitar la altura del carrusel */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #00000033;
+}
+
+
+/* Contenedor interno del carrusel */
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+  align-items: center; /* Centra las imágenes verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+
+/* Cada slide */
+.carousel-item {
+  max-height: 450px; /* Limita el alto máximo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+/* Imágenes dentro del carrusel */
+.carousel-item img {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: auto; /* Mantiene la proporción original */
+    object-fit: cover; /* Cubre el contenedor sin distorsionarse */
+    border-radius: 10px;
 }
