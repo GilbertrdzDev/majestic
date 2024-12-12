@@ -319,7 +319,7 @@ footer {
 #contact-form label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom:0;
 }
 
 #contact-form input,
@@ -328,7 +328,7 @@ footer {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
 }
 
@@ -336,6 +336,7 @@ footer {
 #contact-form textarea:focus {
     border-color: #b30600;
     outline: none;
+    border-radius: 10px;
 }
 
 #contact-form button {
@@ -613,4 +614,79 @@ h2 {
 
 .centrado-titulo {
     text-align: center; /* Centra el texto dentro del h2 */
+}
+
+/*estilos de checkout.html*/
+.cart-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #b6813c;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #b6813c;
+    vertical-align: middle; 
+}
+th {
+    background-color: #f0f0f0; /* Color de fondo para el encabezado */
+    font-weight: bold;
+}
+.product-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Hace las imágenes circulares */
+    margin-right: 10px; 
+   padding-inline: 10px;
+}
+
+.apply, .product-pay, .delete-button {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.apply:hover, .product-pay:hover, .delete-button:hover {
+    background-color: #25b6b6;
+    transform: scale(1.05);
+}
+.payment-options {
+    margin-top: 20px;
+}
+  
+.payment-form {
+  display: none;
+  background-color: #f9f9f9; /* Color de fondo del cuadro */
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Ajusta el radio según tu preferencia */
+  padding: 20px;
+  margin: 20px auto; /* Centra el formulario */
+  width: 40%; /* Ajusta el ancho según sea necesario */
+}
+
+.coupon-code {
+    margin-top: 20px;
+}
+
+.cart-totals {
+    margin-top: 20px;
 }

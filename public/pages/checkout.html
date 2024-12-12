@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Carrito de Compras</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <div class="product-payment">
+                        <td><img src="../img/ropa-mujer/blusa-casual.jpg" alt="blusa-casual" class="product-image"> Summer T-shirt</td>
+                        <td>$177.00</td>
+                        <span>1</span>
+                        <td class="subtotal"></td>
+                        <td><button class="delete-button">Eliminar</button></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="product-payment">
+                        <td><img src="../img/ropa-hombre/camiseta-casual.jpg" alt="camiseta-casual" class="product-image"> Warm Jacket</td>
+                        <td>$245.00</td>
+                        <span>1</span>
+                        <td class="subtotal"></td>
+                        <td><button class="delete-button">Eliminar</button></td>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+        <div class="payment-options">
+            <h3>Selecciona tu método de pago:</h3>
+            <label><input type="radio" name="payment" value="mastercard"> Mastercard</label>
+            <label><input type="radio" name="payment" value="visa"> Visa</label>
+            <label><input type="radio" name="payment" value="paypal"> PayPal</label>
+          </div>
+          
+          <div class="payment-form">
+            <h4 style="text-align: center;">Datos de pago</h4>
+            <br>
+            <label for="name">Nombre Completo:</label>
+            <input type="text" placeholder="Nombre del titular">
+            <br><br>
+            <label for="number">Númeo de tarjeta:</label>
+            <input type="text" placeholder="XXX XXXX XXXX XXXX">
+            <br><br>
+            <label for="date">Fecha de vencimiento:</label>
+            <input type="text" placeholder="XX/XX/XXXX">
+            <br><br>
+            <label for="number">CVV:</label>
+            <input type="text" placeholder="CVV">
+            <br><br>
+            <button>Confirmar pago</button>
+          </div>
+        <div class="coupon-code">           
+            <button class="apply">Aplicar Cupón</button>
+        </div>
+        <div class="cart-totals">
+            <p>Subtotal: <span id="subtotal"></span></p>
+            <p>Total: <span id="total"></span></p>
+            <button class="product-pay">Proceder al pago</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
