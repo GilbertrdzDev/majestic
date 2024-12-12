@@ -585,11 +585,20 @@ h1 {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-.product-card button:hover {
-    background-color: #25b6b6;
-    transform: scale(1.05);
+    &:hover {
+        background-color: #25b6b6;
+        transform: scale(1.05);
+    }
+
+    &.btn-remove-cart {
+        background-color: #ff0000;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: #ff3333;
+        }
+    }
 }
 
 /**
