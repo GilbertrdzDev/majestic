@@ -503,7 +503,7 @@ h1 {
 .header-bar {
     position: relative;
     display: flex; /* Alinea las imágenes en fila horizontal */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
+    width: 100%; /* Ocupa el ancho del contenedor */
     height: 250px; /* Altura de la barra */
     background-color: #F6D8C6;
 }
@@ -592,20 +592,6 @@ h1 {
 /**
  * Contact page
  */
-.header-bar {
-    position: relative;
-    display: flex; /* Alinea las imágenes en fila horizontal */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 250px; /* Altura de la barra */
-    background-color: #F6D8C6;
-}
-
-.header-bar img {
-    width: 13%; /* Cada imagen ocupa el 25% del ancho */
-    height: 110%; /* Ajusta la altura al 100% de la barra */
-    object-fit: cover; /* Ajusta la imagen para que se recorte sin distorsión */
-}
-
 h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -620,56 +606,6 @@ h2 {
     border-radius: 10px;
     border: 2px solid #333333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.header-bar h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el texto horizontal y verticalmente */
-    font-size: 2.0rem; /* Tamaño del texto */
-    color: #fdfdfd; /* Blanco */
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
-    padding: 15px 30px; /* Espaciado interno */
-    border: 4px solid #f5f4f3; /* Borde más grueso */
-    border-radius: 10px; /* Bordes redondeados */
-    text-align: center;
-}
-
-/**
- * Deportiva page
- */
-.header-bar {
-    position: relative;
-    display: flex; /* Alinea las imágenes en fila horizontal */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 250px; /* Altura de la barra */
-    background-color: #F6D8C6;
-}
-
-.header-bar img {
-    width: 13%; /* Cada imagen ocupa el 25% del ancho */
-    height: 110%; /* Ajusta la altura al 100% de la barra */
-    object-fit: cover; /* Ajusta la imagen para que se recorte sin distorsión */
-}
-
-
-.header-bar h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el texto horizontal y verticalmente */
-    font-size: 3.0rem; /* Tamaño del texto */
-    color: #fdfdfd; /* Blanco */
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
-    padding: 15px 30px; /* Espaciado interno */
-    border: 4px solid #f5f4f3; /* Borde más grueso */
-    border-radius: 10px; /* Bordes redondeados */
-    text-align: center;
 }
 
 .centrado-titulo {
