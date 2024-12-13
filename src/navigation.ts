@@ -53,15 +53,17 @@ let navHTML = `<ul>` +
 
 if (nav) nav.innerHTML = navHTML;
 
-for (const item of navItems) {
-  await registerRoute(item.url, item.render);
+(async () => {
+  for (const item of navItems) {
+    await registerRoute(item.url, item.render);
 
-  if (item.subItems) {
-    for (const subItem of item.subItems) {
-      await registerRoute(subItem.url, subItem.render);
+    if (item.subItems) {
+      for (const subItem of item.subItems) {
+        await registerRoute(subItem.url, subItem.render);
+      }
     }
   }
-}
+})();
 
 const router = getRouter();
 
