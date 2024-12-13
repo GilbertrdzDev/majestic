@@ -1,99 +1,89 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8"/>
-    <link rel="icon" type="image/png" href="/majestic-32x32-B.png"/>
+    <link rel="icon" type="image/png" href="/recursos/logo/majestic-32x32-B.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Majestic</title>
-</head>
+    <meta name="description"
+          content="Majestic es una plataforma que conecta a artesanos locales de Santa Marta y la región del Magdalena con consumidores globales, promoviendo la sostenibilidad y el desarrollo comunitario. Ofrece productos artesanales únicos, permitiendo a los usuarios explorar un catálogo interactivo que incluye narrativas sobre técnicas ancestrales y opciones de personalización. Este modelo beneficia a los artesanos al proporcionarles un mercado justo y a los consumidores al acceder a piezas auténticas, contribuyendo así a la preservación cultural y al comercio justo. Majestic busca construir un futuro más sostenible, valorando el trabajo artesanal y fomentando prácticas responsables en la industria de la moda. Ropa artesanal, sostenible, comercio justo, moda ética, Majestic.">
+    <meta name="keywords"
+          content="artesanía, moda sostenible, comercio justo, Santa Marta, desarrollo comunitario, productos artesanales, economía circular, preservación cultural, empleo local, técnicas ancestrales, personalización de productos, plataforma digital, consumo consciente, comunidad artesanal, impacto ambiental, tradición, diseño ético, conexión directa, venta en línea, responsabilidad social, ropa artesanal, moda sostenible, comercio justo, moda ética, Majestic, ropa eco-amigable, diseño sostenible, prendas únicas, slow fashion, consumo consciente, estilo de vida sostenible, moda alternativa, moda ética, moda slow, moda responsable, moda orgánica, algodón orgánico, tintes naturales, producción local, artesanía, handmade, hecho a mano, fair trade, eco friendly fashion, sustainable fashion, unique fashion, slow fashion movement, conscious consumerism, sustainable lifestyle, alternative fashion">
+
+    <!-- Contenedor de Navegación -->
 <body>
 <!-- Header -->
 <header>
-    <img src="/img/resources/logo/majestic.png" alt="Majestic Logo" class="logo">
+    <img src="/recursos/logo/Majestic.png" alt="Majestic Logo" class="logo">
     <nav id="navigation"></nav>
+
+    <!-- Iconos -->
+    <div class="icons-container">
+        <img src="/recursos/logo/user.png" alt="User">
+        <img src="/recursos/logo/lupa.png" alt="Search">
+        <img src="/recursos/logo/corazon.png" alt="Wishlist">
+        <img id="cart-button" src="/recursos/logo/carro1.png" alt="Cart">
+    </div>
+    <!-- Iconos -->
+
 </header>
+
+<div id="overlay"></div>
+<div id="cart-panel" class="px-4">
+    <h2>Tu carrito</h2>
+    <div id="cart-items" class="overflow-y-auto"></div>
+    <div class="py-4 grid grid-cols-2 justify-around">
+        <div>Productos:</div>
+        <div id="total-products" class="text-right pr-4"></div>
+        <div>Total:</div>
+        <div id="total-price" class="text-right pr-4"></div>
+    </div>
+</div>
 
 <!-- Main -->
 <main>
-    <div id="app"></div>
-</main>
-
-<!-- Footer -->
-<footer style="background-color: #1a1a1a; color: white; padding: 20px 0; border-radius: 8px;">
-    <div style="text-align: center; margin-bottom: 20px;">
-        <h2 style="color: #FFD700; margin: 0;">Información de Contacto</h2>
+    <div id="app">
+        <div></div>
     </div>
-
-    <div style="display: flex; justify-content: space-between; text-align: left; padding: 20px;">
-        <!-- Columna de Contacto -->
-        <div style="flex: 1; margin: 0 10px;">
-            <h3 style="color: #FFD700;">Contacto</h3>
-            <p>
-                <!-- Teléfono con emoji -->
-                <span style="font-size: 20px; margin-right: 8px;">📞</span>
-                Teléfono: +57 312 345 6789
-            </p>
-            <p>
-                <!-- Email con emoji -->
-                <span style="font-size: 20px; margin-right: 8px;">📧</span>
-                Email: <a href="mailto:contacto@majestic.com" style="color: white; text-decoration: none;">contacto@majestic.com</a>
-            </p>
-            <p>
-                <!-- Dirección con emoji -->
-                <span style="font-size: 20px; margin-right: 8px;">📍</span>
-                Dirección: Calle 123, Bogotá, Colombia
-            </p>
+</main>
+<footer>
+    <div class="footer-container">
+        <!-- Columna de Logo -->
+        <div class="footer-column logo-column">
+            <img src="/recursos/logo/Majestic-W.png" alt="Majestic Logo" class="footer-logo">
         </div>
 
+        <!-- Columna de Contacto -->
+        <div class="footer-column">
+            <h3>Contacto</h3>
+            <p><span class="icon">📞</span> Teléfono: +57 312 345 6789</p>
+            <p><span class="icon">📧</span> Email: <a href="mailto:contacto@majestic.com">contacto@majestic.com</a></p>
+            <p><span class="icon">📍</span> Dirección: Calle 123, Bogotá, Colombia</p>
+        </div>
 
         <!-- Columna de Horarios -->
-        <div style="flex: 1; margin: 0 10px;">
-            <h3 style="color: #FFD700;">Horarios</h3>
-            <p>
-                <!-- Emoji de lunes a viernes -->
-                <span style="font-size: 20px; margin-right: 8px;">🗓️</span>
-                Lunes a Viernes: 8:00 AM - 6:00 PM
-            </p>
-            <p>
-                <!-- Emoji de sábado -->
-                <span style="font-size: 20px; margin-right: 8px;">📅</span>
-                Sábados: 9:00 AM - 3:00 PM
-            </p>
-            <p>
-                <!-- Emoji de domingo -->
-                <span style="font-size: 20px; margin-right: 8px;">🚫</span>
-                Domingos: Cerrado
-            </p>
+        <div class="footer-column">
+            <h3>Horarios</h3>
+            <p><span class="icon">🗓️</span> Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+            <p><span class="icon">📅</span> Sábados: 9:00 AM - 3:00 PM</p>
+            <p><span class="icon">🚫</span> Domingos: Cerrado</p>
         </div>
-
 
         <!-- Columna de Redes Sociales -->
-        <div style="flex: 1; margin: 0 10px;">
-            <h3 style="color: #FFD700;">Síguenos</h3>
-            <p>
-                <!-- Facebook con emoji -->
-                <a href="https://facebook.com/majestic" target="_blank" style="color: white; text-decoration: none;">
-                    🌐 Facebook
-                </a>
-            </p>
-            <p>
-                <!-- Instagram con emoji -->
-                <a href="https://instagram.com/majestic" target="_blank" style="color: white; text-decoration: none;">
-                    📸 Instagram
-                </a>
-            </p>
-            <p>
-                <!-- Twitter con emoji -->
-                <a href="https://twitter.com/majestic" target="_blank" style="color: white; text-decoration: none;">
-                    🐦 Twitter
-                </a>
-            </p>
+        <div class="footer-column">
+            <h3>Síguenos</h3>
+            <p><a href="https://facebook.com/majestic" target="_blank">🌐 Facebook</a></p>
+            <p><a href="https://instagram.com/majestic" target="_blank">📸 Instagram</a></p>
+            <p><a href="https://twitter.com/majestic" target="_blank">🐦 Twitter</a></p>
         </div>
-
-
     </div>
-    <p style="text-align: center; margin-top: 20px;">&copy; 2024 Majestic - Todos los derechos reservados.</p>
+
+    <!-- Derechos Reservados -->
+    <p class="footer-rights">&copy; 2024 Majestic - Todos los derechos reservados.</p>
 </footer>
+
+
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

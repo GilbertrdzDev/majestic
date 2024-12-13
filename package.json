@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/navigo": "^8.1.2",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.14",
     "navigo": "^8.11.1",
@@ -23,5 +22,10 @@
   "main": "tailwind.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@alpinejs/morph": "^3.14.7",
+    "@types/alpinejs": "^3.13.11",
+    "alpinejs": "^3.14.7"
+  }
 }

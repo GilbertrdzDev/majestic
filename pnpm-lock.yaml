@@ -7,10 +7,17 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@alpinejs/morph':
+        specifier: ^3.14.7
+        version: 3.14.7
+      '@types/alpinejs':
+        specifier: ^3.13.11
+        version: 3.13.11
+      alpinejs:
+        specifier: ^3.14.7
+        version: 3.14.7
     devDependencies:
-      '@types/navigo':
-        specifier: ^8.1.2
-        version: 8.1.2
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -38,6 +45,9 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@alpinejs/morph@3.14.7':
+    resolution: {integrity: sha512-wT39yI1/QEiT4FOFJM/Scs1K4s7RcvY09PNuUJpCk2osSw1RAtZkLfmyVLUPC9EvIBti9RPxBJdiAPebi798zw==}
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -310,12 +320,20 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@types/alpinejs@3.13.11':
+    resolution: {integrity: sha512-3KhGkDixCPiLdL3Z/ok1GxHwLxEWqQOKJccgaQL01wc0EVM2tCTaqlC3NIedmxAXkVzt/V6VTM8qPgnOHKJ1MA==}
+
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
-  '@types/navigo@8.1.2':
-    resolution: {integrity: sha512-D/cX7Wq7lMGjEX42Dgwi6PsDk29VpurpKi0ZY64RyRXdiSME7ESy+jOif4qQjgPuPvxehklty5Rga/0/nLXSqw==}
-    deprecated: This is a stub types definition. navigo provides its own type definitions, so you do not need this installed.
+  '@vue/reactivity@3.1.5':
+    resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
+
+  '@vue/shared@3.1.5':
+    resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
+
+  alpinejs@3.14.7:
+    resolution: {integrity: sha512-ScnbydNBcWVnCiVupD3wWUvoMPm8244xkvDNMxVCspgmap9m4QuJ7pjc+77UtByU+1+Ejg0wzYkP4mQaOMcvng==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -796,6 +814,8 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
+  '@alpinejs/morph@3.14.7': {}
+
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
 
@@ -963,11 +983,19 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.28.1':
     optional: true
 
+  '@types/alpinejs@3.13.11': {}
+
   '@types/estree@1.0.6': {}
 
-  '@types/navigo@8.1.2':
+  '@vue/reactivity@3.1.5':
     dependencies:
-      navigo: 8.11.1
+      '@vue/shared': 3.1.5
+
+  '@vue/shared@3.1.5': {}
+
+  alpinejs@3.14.7:
+    dependencies:
+      '@vue/reactivity': 3.1.5
 
   ansi-regex@5.0.1: {}
 
