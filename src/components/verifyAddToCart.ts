@@ -1,10 +1,13 @@
 import { Cart } from "../models/Cart.ts";
 import { LocalStorage } from "./localStorage.ts";
+import { getCartItemHTML } from "./getCartItemHTML.ts";
+import { setTotalProductsAndPrice } from "./setTotalProductsAndPrice.ts";
 
 export const verifyAddToCart = () => {
   const cart: Cart = LocalStorage.getCart()
   const cartItems = cart.getItems();
   const countItems = cartItems.length;
+  const elCartItems = document.getElementById('cart-items');
 
   if (countItems > 0) {
     const products: NodeListOf<HTMLElement> = document.querySelectorAll('.product-card');
@@ -14,7 +17,6 @@ export const verifyAddToCart = () => {
         return item.product.name === name && item.product.price === Number(price);
       });
       if (cartItem) {
-        console.log(cartItem);
         product.dataset.id = String(cartItem.id);
         const button = product.querySelector('button');
         if (button) {
@@ -24,5 +26,11 @@ export const verifyAddToCart = () => {
         }
       }
     });
+
+    if (elCartItems) {
+      elCartItems.innerHTML = cartItems.map((item) => getCartItemHTML(item)).join('');
+    }
+
+    setTotalProductsAndPrice();
   }
 }

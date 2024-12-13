@@ -39,7 +39,12 @@ export class LocalStorage {
       cartItems.forEach((item: any) => {
         item = new CartItem(
           item.id,
-          new Product(item.product.id, item.product.name, item.product.price),
+          new Product(
+            item.product.id,
+            item.product.name,
+            item.product.price,
+            item.product.image,
+          ),
           item.quantity,
         );
         cart.addItem(item);

@@ -23,11 +23,23 @@
         <img src="/recursos/logo/user.png" alt="User">
         <img src="/recursos/logo/lupa.png" alt="Search">
         <img src="/recursos/logo/corazon.png" alt="Wishlist">
-        <img src="/recursos/logo/carro1.png" alt="Cart">
+        <img id="cart-button" src="/recursos/logo/carro1.png" alt="Cart">
     </div>
     <!-- Iconos -->
 
 </header>
+
+<div id="overlay"></div>
+<div id="cart-panel" class="px-4">
+    <h2>Tu carrito</h2>
+    <div id="cart-items" class="overflow-y-auto"></div>
+    <div class="py-4 grid grid-cols-2 justify-around">
+        <div>Productos:</div>
+        <div id="total-products" class="text-right pr-4"></div>
+        <div>Total:</div>
+        <div id="total-price" class="text-right pr-4"></div>
+    </div>
+</div>
 
 <!-- Main -->
 <main>

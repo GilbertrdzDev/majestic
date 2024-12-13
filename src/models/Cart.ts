@@ -1,4 +1,5 @@
 import { CartItem } from "./CartItem.ts";
+import { toFormatCurrency } from "../components/toFormatCurrency.ts";
 
 export class Cart {
   private items: CartItem[] = [];
@@ -22,7 +23,11 @@ export class Cart {
   getTotalPrice() {
     return this.items.reduce((total, item) => {
       return total + item.quantity * item.product.price;
-    }, 0);
+    }, 0).toFixed(2);
+  }
+
+  getTotalPriceWithFormat() {
+    return `$${toFormatCurrency({value: this.getTotalPrice()})}`;
   }
 
   clear() {
